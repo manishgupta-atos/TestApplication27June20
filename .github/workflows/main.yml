@@ -33,6 +33,6 @@ jobs:
     
     - uses: microsoft/setup-msbuild@v1.0.0
     - name: Build solution **\*.sln
-      run: msbuild  TestApplication.sln /p:OutputPath='.\ReleaseMN'
+      run: msbuild  TestApplication.sln /p:OutputPath='.\TestApplication27June20\ReleaseMN'
         
         
