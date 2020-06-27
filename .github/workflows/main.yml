@@ -37,7 +37,8 @@ jobs:
     - uses: actions/checkout@v2
       name: Checkout
      
-    - run: 'Template/Temp1.yaml'
+    #- run: 'Template/Temp1.yaml'
+    - run: '././YamlRepo/Temp1.yaml'
       name: Test
         
         
