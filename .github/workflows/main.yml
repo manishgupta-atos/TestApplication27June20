@@ -37,7 +37,7 @@ jobs:
     - uses: actions/checkout@v2
       name: Checkout
      
-    - uses: manishgupta-atos/TestApplication27June20/.github/template/Temp1@master
+    - uses: manishgupta-atos/TestApplication27June20/.github/Template/Temp1@master
       name: Test
         
         
