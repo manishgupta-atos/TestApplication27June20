@@ -1,1 +1,8 @@
 
+# Runs a single command using the runners shell
+    - name: Checkoutstep
+      run: echo Checkoutstep 1!
+
+# Runs a single command using the runners shell
+    - name: Checkoutstep
+      run: echo Checkoutstep 2!
