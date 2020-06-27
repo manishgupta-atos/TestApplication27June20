@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    
     #- uses: nuget/setup-nuget@v1
     #- uses: warrenbuckley/Setup-MSBuild@v1
     
@@ -34,6 +34,8 @@ jobs:
     #- uses: microsoft/setup-msbuild@v1.0.0
     #- name: Build solution **\*.sln
      # run: msbuild  TestApplication.sln /p:OutputPath='.\TestApplication27June20\ReleaseMN'
+    - uses: actions/checkout@v2
+      name: Checkout
      
     - uses: ./.github/template/temp1@master
       name: Test
