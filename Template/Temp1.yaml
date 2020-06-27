@@ -25,3 +25,7 @@ jobs:
     
     - name: Nugetrestore
       run: nuget restore TestApplication.sln
+      
+      # Runs a single command using the runners shell
+    - name: Checkoutstep
+      run: echo Checkoutstep!
