@@ -58,7 +58,8 @@ jobs:
       
         env:
           AZURE_WEBAPP_NAME: 'nikhilwebapp1'
-          AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
+          AZURE_WEBAPP_PACKAGE_PATH: .\ReleaseMN
+          #AZURE_WEBAPP_PACKAGE_PATH: 'D:\a\TestApplication27June20\TestApplication27June20\ReleaseMN'
             
       - name: Deploy Artifacts
         uses: azure/webapps-deploy@v1
