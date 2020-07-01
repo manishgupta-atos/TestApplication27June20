@@ -38,7 +38,7 @@ jobs:
       name: Checkout
      
     #- run: 'Template/Temp1.yaml'
-    - run: 'Template/Temp2.yaml'
-      name: Test2
+    #- run: 'Template/Temp2.yaml'
+    #  name: Test2
         
         
