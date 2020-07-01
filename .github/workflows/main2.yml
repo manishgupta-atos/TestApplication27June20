@@ -60,4 +60,4 @@ jobs:
           AZURE_WEBAPP_NAME: 'nikhilwebapp1'
           AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
       
-      - run: echo ${./ReleaseMN}}      
+      - run: echo ${{AZURE_WEBAPP_PACKAGE_PATH}}      
