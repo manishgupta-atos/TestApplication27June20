@@ -45,8 +45,19 @@ jobs:
       with:
         name: ReleaseMN
         path: TestApplication\ReleaseMN
-    #- run: 'Template/Temp1.yaml'
-    #- run: 'Template/Temp2.yaml'
-    #  name: Test2
-        
-        
+
+  test:
+    
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v1.0.0
+        with:
+          name: ReleaseMN
+      
+        env:
+          AZURE_WEBAPP_NAME: 'nikhilwebapp1'
+          AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
+      
+      - run: echo ${./ReleaseMN}}      
