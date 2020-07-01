@@ -35,7 +35,7 @@ jobs:
     
     - uses: microsoft/setup-msbuild@v1.0.0
     - name: Build solution **\*.sln
-      run:  msbuild  TestApplication.sln /p:OutputPath='.\ReleaseMN'
+      run:  msbuild  TestApplication.sln /p:OutputPath='.\TestApplication27June20\TestApplication27June20\ReleaseMN'
 
     - uses: actions/checkout@v2
       name: Checkout
@@ -43,8 +43,8 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: ForTest
-        path: ReleaseMN
+        name: ReleaseMN
+        path: TestApplication27June20
     #- run: 'Template/Temp1.yaml'
     #- run: 'Template/Temp2.yaml'
     #  name: Test2
