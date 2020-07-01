@@ -46,8 +46,7 @@ jobs:
         name: ReleaseMN
         path: TestApplication\ReleaseMN
 
-  test:
-    
+  test:    
     runs-on: windows-latest
     needs: build
     steps:
@@ -58,8 +57,8 @@ jobs:
       
         env:
           AZURE_WEBAPP_NAME: 'nikhilwebapp1'
-          AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
-          #AZURE_WEBAPP_PACKAGE_PATH: 'D:\a\TestApplication27June20\TestApplication27June20\ReleaseMN'
+          #AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
+          AZURE_WEBAPP_PACKAGE_PATH: 'D:\a\TestApplication27June20\TestApplication27June20\ReleaseMN'
       
       - name: Hello world
         run: echo Env $AZURE_WEBAPP_PACKAGE_PATH 
