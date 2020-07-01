@@ -21,22 +21,27 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     
-    #- uses: nuget/setup-nuget@v1
-    #- uses: warrenbuckley/Setup-MSBuild@v1
+    - uses: nuget/setup-nuget@v1
+    - uses: warrenbuckley/Setup-MSBuild@v1
     
-    #- name: Nugetrestore
-     # run: nuget restore TestApplication.sln
+    - name: Nugetrestore
+      run: nuget restore TestApplication.sln
     
     #- name: MSBuild
     #  working-directory: TestApplication
     #  run:  msbuild TestApplication.csproj
     
-    ##- uses: microsoft/setup-msbuild@v1.0.0
-    #- name: Build solution **\*.sln
-     # run: msbuild  TestApplication.sln /p:OutputPath='.\TestApplication27June20\ReleaseMN'
+    - uses: microsoft/setup-msbuild@v1.0.0
+    - name: Build solution **\*.sln
+      run: msbuild  TestApplication.sln /p:OutputPath='.\ReleaseMN'
     - uses: actions/checkout@v2
       name: Checkout
      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: ForTest
+        path: ReleaseMN
     #- run: 'Template/Temp1.yaml'
     #- run: 'Template/Temp2.yaml'
     #  name: Test2
