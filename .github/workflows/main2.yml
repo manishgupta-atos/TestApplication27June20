@@ -37,8 +37,8 @@ jobs:
     - name: Build solution **\*.sln
       run:  msbuild  TestApplication.sln /p:OutputPath='.\TestApplication27June20\TestApplication27June20\ReleaseMN'
 
-    - uses: actions/checkout@v2
-      name: Checkout
+    #- uses: actions/checkout@v2
+     # name: Checkout
      
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
