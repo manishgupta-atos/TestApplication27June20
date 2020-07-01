@@ -59,10 +59,7 @@ jobs:
         env:
           AZURE_WEBAPP_NAME: 'nikhilwebapp1'
           AZURE_WEBAPP_PACKAGE_PATH: ./ReleaseMN
-      
-      - name: Check Deploy Artifacts
-      - run: echo ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-        
+            
       - name: Deploy Artifacts
         uses: azure/webapps-deploy@v1
         with:
